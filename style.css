@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "popins", sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #4db2ec;
+}
+.wrapper header{
+    color: #4db2ec;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+}
+.wrapper{
+    width: 480px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 22px 3px 40px;
+}
+.captcha-area {  
+    display: flex;
+    height: 50px;
+    margin: 30px 40px 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.captcha-img {  
+    height: 125%;
+    width: 320px;
+    user-select: none;
+    position:relative;
+    background: #000;
+    border-radius: 5px;
+}
+
+.captcha-img img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.95;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.captcha-img .captcha{
+    position: absolute; 
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 35px;
+    letter-spacing: 10px;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 2px #b1b1b1;
+    font-family:'Noto Serif', serif ;
+}
+.wrapper button {
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer ;
+    background: #4db2ec;
+    border-radius: 5px;
+}
+.captcha-area .reload-btn{
+    width: 65px;
+    height: 100%;
+    font-size: 23px;
+}
+.captcha-area .reload-btn i{
+    transition: transform 0.3s ease;
+}
+.captcha-area .reload-btn:hover i{
+    transform: rotate(18deg);
+}
+.wrapper .input-area{
+    height: 75px;
+    width: 100%;
+    position: relative;
+}
+.input-area input:valid + .check-btn{
+    opacity: 1;
+    pointer-events: auto;
+}
+.status-txt{
+    margin-top: 15px;
+    margin-left: 38px;
+    font-size: 18px;
+    margin-left:80px;
+    color: red;
+}
+.input-area input{
+    height: 85%;
+    width: 84%;
+    outline: none;
+    font-size: 18px;
+    padding-left: 17px;
+    border-radius: 5px;
+    margin-left: 40px;
+    border: 1px solid #bfbfbf
+}
+.input-area input:is(:focus, :valid){
+    padding-left: 19px;
+    border: 2px solid #4db2ec;
+}
+.input-area .check-btn{
+    position: absolute;
+    right: 48px;
+    top: 43%;
+    font-size: 17px;
+    height: 45px;
+    padding: 0 14px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
