@@ -1,122 +1,234 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "popins", sans-serif;
-}
-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background: #4db2ec;
-}
-.wrapper header{
-    color: #4db2ec;
-    font-size: 24px;
-    font-weight: 500;
-    text-align: center;
-}
-.wrapper{
-    width: 480px;
-    background: #fff;
-    border-radius: 10px;
-    padding: 22px 3px 40px;
-}
-.captcha-area {  
-    display: flex;
-    height: 50px;
-    margin: 30px 40px 20px;
-    align-items: center;
-    justify-content: space-between;
-}
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: url('https://media.istockphoto.com/id/1140409137/vector/trendy-low-poly-triangles-with-navy-bg.jpg?s=612x612&w=0&k=20&c=vunManM5m2lfkcgYpOd_dIF-gCGUEUL4SjLYe-o9Nng=') no-repeat center center/cover; 
+            padding: 20px;
+        }
+        .card{
+            height: 286px !important;
+            width: 425px;
+        }
+        .wrapper header{
+            color: #124067;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .wrapper{
+            background: #fff;
+            border-radius: 15px;
+            padding: 35px 30px 45px;
+            width: 100%;
+            width: 600px; 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            min-height: 420px; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .captcha-area {  
+            display: flex;
+            height: 65px; 
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
 
-.captcha-img {  
-    height: 125%;
-    width: 320px;
-    user-select: none;
-    position:relative;
-    background: #000;
-    border-radius: 5px;
-}
+        .captcha-img {  
+            height: 100%;
+            width: 100%;
+            user-select: none;
+            position:relative;
+            background: #000;
+            border-radius: 8px;
+            overflow: hidden;
+        }
 
-.captcha-img img {
-    width: 100%;
-    height: 100%;
-    opacity: 0.95;
-    object-fit: cover;
-    border-radius: 5px;
-}
-.captcha-img .captcha{
-    position: absolute; 
-    left: 50%;
-    top: 50%;
-    width: 100%;
-    color: #fff;
-    text-align: center;
-    font-size: 35px;
-    letter-spacing: 10px;
-    transform: translate(-50%, -50%);
-    text-shadow: 0 0 2px #b1b1b1;
-    font-family:'Noto Serif', serif ;
-}
-.wrapper button {
-    border: none;
-    outline: none;
-    color: #fff;
-    cursor: pointer ;
-    background: #4db2ec;
-    border-radius: 5px;
-}
-.captcha-area .reload-btn{
-    width: 65px;
-    height: 100%;
-    font-size: 23px;
-}
-.captcha-area .reload-btn i{
-    transition: transform 0.3s ease;
-}
-.captcha-area .reload-btn:hover i{
-    transform: rotate(18deg);
-}
-.wrapper .input-area{
-    height: 75px;
-    width: 100%;
-    position: relative;
-}
-.input-area input:valid + .check-btn{
-    opacity: 1;
-    pointer-events: auto;
-}
-.status-txt{
-    margin-top: 15px;
-    margin-left: 38px;
-    font-size: 18px;
-    margin-left:80px;
-    color: red;
-}
-.input-area input{
-    height: 85%;
-    width: 84%;
-    outline: none;
-    font-size: 18px;
-    padding-left: 17px;
-    border-radius: 5px;
-    margin-left: 40px;
-    border: 1px solid #bfbfbf
-}
-.input-area input:is(:focus, :valid){
-    padding-left: 19px;
-    border: 2px solid #4db2ec;
-}
-.input-area .check-btn{
-    position: absolute;
-    right: 48px;
-    top: 43%;
-    font-size: 17px;
-    height: 45px;
-    padding: 0 14px;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-50%);
-}
+        .captcha-img img {
+            width: 100%;
+            height: 100%;
+            opacity: 0.95;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        
+        .captcha-img .captcha{
+            position: absolute; 
+            left: 50%;
+            top: 50%;
+            width: 100%;
+            color: #fff;
+            text-align: center;
+            font-size: 38px;
+            letter-spacing: 12px; 
+            transform: translate(-50%, -50%);
+            text-shadow: 0 0 2px #b1b1b1;
+            font-family:'Noto Serif', serif;
+        }
+        
+        .wrapper button {
+            border: none;
+            outline: none;
+            color: #fff;
+            cursor: pointer ;
+            background:#124067;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .wrapper button:hover {
+            background: #0d2f4d;
+            transform: translateY(-2px);
+        }
+        
+        .captcha-area .reload-btn{
+            height: 100%;
+            font-size: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 75px;
+            margin-left: 15px;
+        }
+        
+        .captcha-area .reload-btn i{
+            transition: transform 0.3s ease;
+        }
+        
+        .captcha-area .reload-btn:hover i{
+            transform: rotate(18deg);
+        }
+        
+        .wrapper .input-area{
+            height: 85px; 
+            width: 100%;
+            position: relative;
+            margin-top: 10px;
+        }
+        
+        .input-area input:valid + .check-btn{
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        .status-txt{
+            display: none;
+            margin-top: 20px; 
+            color: red;
+            font-size: 17px;
+            text-align: center;
+            padding: 8px;
+            border-radius: 5px;
+            background-color: rgba(255, 0, 0, 0.05);
+        }
+        
+        .input-area input{
+            height: 90%; 
+            width: 100%;
+            outline: none;
+            font-size: 19px; 
+            padding-left: 20px;
+            border-radius: 8px; 
+            border: 1px solid #bfbfbf;
+        }
+        
+        .input-area input:is(:focus, :valid){
+            padding-left: 20px;
+            border: 2px solid #124067;
+            box-shadow: 0 0 0 3px rgba(18, 64, 103, 0.1);
+        }
+        
+        .input-area .check-btn{
+            position: absolute;
+            right: 0;
+            top: 50%;
+            font-size: 18px; 
+            height: 52px; 
+            padding: 0 18px; 
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(-50%);
+            font-weight: 500;
+        }
+        
+        /* Responsive adjustments for larger card */
+        @media (max-width: 768px) {
+            .wrapper {
+                max-width: 550px;
+                padding: 30px 25px 40px;
+                min-height: 400px;
+            }
+            
+            .captcha-img .captcha {
+                font-size: 32px;
+                letter-spacing: 10px;
+            }
+            
+            .captcha-area {
+                height: 60px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .wrapper {
+                max-width: 500px;
+                padding: 25px 20px 35px;
+                min-height: 380px;
+                border-radius: 12px;
+            }
+            
+            .captcha-img .captcha {
+                font-size: 26px;
+                letter-spacing: 8px;
+            }
+            
+            .wrapper header {
+                font-size: 22px;
+            }
+            
+            .input-area input {
+                font-size: 17px;
+            }
+            
+            .captcha-area {
+                height: 55px;
+            }
+            
+            .captcha-img .captcha {
+                font-size: 24px;
+                letter-spacing: 6px;
+            }
+            
+            .captcha-area .reload-btn {
+                font-size: 22px;
+                min-width: 65px;
+            }
+            
+            .input-area .check-btn {
+                height: 48px;
+                font-size: 17px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .wrapper {
+                max-width: 100%;
+                padding: 20px 15px 30px;
+                min-height: 350px;
+            }
+            
+            .captcha-img .captcha {
+                font-size: 22px;
+                letter-spacing: 5px;
+            }
+        }

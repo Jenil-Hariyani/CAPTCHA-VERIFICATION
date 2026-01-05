@@ -1,33 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Captcha Project</title>
-    <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-</head>
-<body>
-<div class="wrapper">
-    <header>Captcha In Javascript</header>
-    
-    <div class="captcha-area">
-        <div class="captcha-img">
-            <img src="captcha-bg.jpg" alt="">
-            <span class="captcha">K 4 J v Y o</span>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card shadow p-4 captcha-wrapper">
+      <h4 class="text-center mb-4 text-primary">Captcha In Javascript</h4>
+
+      <!-- Captcha Row -->
+      <div class="d-flex align-items-center gap-3 mb-3">
+        <div class="captcha-img flex-grow-1">
+          <img src="captcha-bg.jpg" alt="" />
+          <span class="captcha"></span>
         </div>
-        <button class="reload-btn"><i class="fas fa-redo-alt"></i></button>
+
+        <button class="btn btn-primary reload-btn">
+          <i class="fas fa-redo-alt"></i>
+        </button>
+      </div>
+
+      <!-- Input -->
+      <form>
+        <div class="input-group mb-2" style="margin-top: 9px">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter Captcha"
+            maxlength="6"
+            required
+          />
+          <button class="btn btn-primary check-btn">Check</button>
+        </div>
+        <div class="status-txt text-center"></div>
+      </form>
     </div>
 
-    <form action="#" class="input-area">
-        <input type="text" placeholder="Enter Captcha" required>
-        <button class="check-btn">Check</button>
-        <div class="status-txt">Captcha not matched. Please try again!</div>
-    </form>
-</div>
-
-    </div>
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
